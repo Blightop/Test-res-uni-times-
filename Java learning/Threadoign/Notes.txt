@@ -1,0 +1,20 @@
+===========
+Volatile = Strong updates variable
+(Change variable for all cores + local caches)
+
+
+
+ways for readable code:
+- Inversion
+
+if this:
+    caches
+then:
+    Ah
+|
+V
+
+if !this:
+    Ah
+if !be:
+    E
