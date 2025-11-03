@@ -9,7 +9,7 @@ public class FlagExample extends Thread{
     public void run() {
         
         int counter = 0;
-        //create counter variable to see how many times the loop runs
+        //create counter variable to see how many times the loop runs w
         
         while (!done) { // Check the flag
             System.out.println("Thread is running...");

@@ -1,0 +1,35 @@
+<html><head><title>Javascript Object</title></head>
+<body>
+    <h1>Creating Objects</h1>
+    <p id="demo"></p>
+
+    <!-- getting -->
+    <script>
+        var Komi = {
+            gender: "F",
+            hair_color: "purple",
+            height: "170",
+
+            get hair(){
+                return this.hair_color
+            },
+        };
+        document.getElementById("demo").innerHTML = Komi.hair;
+    </script> 
+
+    <!-- setter -->
+    <script>
+        var Komi = {
+            gender: "F",
+            hair_color: "",
+            height: "170",
+            
+            set hair(hair){
+                return this.hair_color = hair;
+            },
+        };
+        komi.hair = purple
+        document.getElementById("demo").innerHTML = Komi.hair_color;
+    </script>
+</body>
+</html>

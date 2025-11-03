@@ -1,0 +1,37 @@
+<html><head><title>Javascript Object</title></head>
+<body>
+    <h1>Creating Objects</h1>
+    <p id="demo"></p>
+
+    <script>
+        <!-- Object definition -->
+        var character = {
+            name: "Iwato Suzume",
+            age: 16,
+            studies: "Medicine",
+        };
+        document.getElementById("demo").innerHTML = character.name + " of the age " + character.age + " studies " + character.studies;
+
+    </script>
+
+    <script>
+        var character = new Object();
+            character.name = "Amano Hina",
+            character.age = 15,
+            character.studies = "reducted";
+            document.getElementById("demo").innerHTML = character.name + " of the age " + character.age + " studies " + character.studies;
+    </script>
+
+    <script>
+        function char(name, age, studies){
+            this.name = name
+            this.age = age;
+            this.studies = studies;
+        }
+        var character = char("Morishima Hodaka", 18, "Geographic");
+        document.getElementById("demo").innerHTML = character.name + " of the age " + character.age + " studies " + character.studies;
+    </script>
+
+    
+</body>
+</html>

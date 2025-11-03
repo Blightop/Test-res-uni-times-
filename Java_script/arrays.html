@@ -1,0 +1,84 @@
+<html>
+    <head>javascript array tutorial</head>
+    <body>
+        <p id="demo"></p>
+    </body>
+    <script>
+        let Anime = ["Hori Kyosuke","Miyamura Mizu","Sawado"];
+        document.getElementById("demo").innerHTML = Anime;
+        
+        <!--defined variable in list-->
+        let Hori = Anime[0];
+        document.getElementById("demo").innerHTML = Hori;
+
+        <!-- length -->
+        let len = Anime.length;
+        document.getElementById("demo").innerHTML = len;
+
+        <!-- last variable -->
+        let last = Anime[Anime.length - 1]
+        document.getElementById("demo").innerHTML = last;
+        
+        <!-- loop thorugh (in console only)-->
+        Anime.forEach((item, index, array) => {console.log(item, index);});
+
+        <!-- toString() -->
+        document.getElementById("demo").innerHTML = Anime.toString();
+
+        <!-- remove last variable -->
+        let last_remove = Anime.pop();
+        document.getElementById("demo").innerHTML = last_remove;
+        let last_remove_2 = Anime[Anime.length - 1];
+        console.log(last_remove_2);
+
+        <!-- Push element -->
+        Anime.push("Komi");
+        document.getElementById("demo").innerHTML = Anime;
+        
+        <!-- remove first element -->
+        Anime.shift();
+        document.getElementById("demo").innerHTML = Anime;
+        
+        <!-- add element at the beginning -->
+        Anime.unshift("Morissette");
+        document.getElementById("demo").innerHTML = Anime;
+
+        <!-- add arrays together -->
+        let Tenkinoko = ["Hina Amano", "Nagi Amano", "Morishima Hodaka"]
+        let Animes = Anime.concat(Tenkinoko);
+        document.getElementById("demo").innerHTML = Animes;
+
+        <!-- sort ascending order -->
+        Animes.sort();
+        document.getElementById("demo").innerHTML = Animes;
+
+        <!-- reverse all elements -->
+        Animes.reverse();
+        document.getElementById("demo").innerHTML = Animes;
+
+        <!-- map -->
+        let num1 = [2, 3, 4, 5, 5, 4];
+        let num2 = num1.map(multiply);
+        function multiply(value){
+            return value *2;
+        }
+        <!-- multiple all variables in num1, save in num2 -->
+        document.getElementById("demo").innerHTML = num2;
+
+        <!-- filter variables -->
+        let num3 = num1.filter(comp);
+        function comp(value){
+            return value>4;
+        }
+        <!-- remove value less than 4 -->
+        document.getElementById("demo").innerHTML = num3;
+
+        <!-- reduce value -->
+        let num4 = num1.reduce(sum);
+        function sum(total, value) {
+            return total+value;
+        }
+        document.getElementById("demo").innerHTML = num4;
+
+    </script>
+</html>

@@ -1,0 +1,21 @@
+<html><head><title>Javascript Object</title></head>
+<body>
+    <h1>Creating Objects</h1>
+    <p id="demo"></p>
+    <button id="click me">CLCK ME</button>
+
+    <script>
+        <!-- alret user using button -->
+        let user = {
+            name: "Miyamizu Mitsuha",
+            age: 16,
+        };
+        function sayHi(){
+            alert("Ohayo");
+        }
+        user.message = sayHi;
+        document.getElementById("demo").innerHTML = "Ohayo " + user.name;
+        document.getElementById("click me").onclick = user.message;
+    </script>
+</body>
+</html>
