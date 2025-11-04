@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Clousrse</title>
+</head>
+<body>
+    <!-- a = global, b= local -->
+    <!-- <script>
+        let a = 10;
+        function My_function(){
+            let b = 20
+            document.write(a+b)
+        }
+        My_function()
+    </script>-->
+    <!-- closure = inner function access outer function var -->
+    <script>
+        var a = 10;
+        function first_func(){
+            var b = 20;
+            function second_func(){
+                var c = a+b
+                return c
+            }
+            return second_func();
+        }
+        var sum = first_func()
+        document.write("The sum is " + sum + '<br>')
+    </script>
+</body>
+</html>

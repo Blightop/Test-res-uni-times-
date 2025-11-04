@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript This-keyboarrd</title>
+</head>
+<body>
+    <!-- Local first, Global last -->
+    <!-- <script>
+        var value = 50
+
+        function My_function(){
+            var value = 100
+            alert("Value: " + value)
+            alert("This value: " + this.value)
+        }
+        My_function()
+    </script> -->
+
+    <script>
+        const random = {
+            name: "Hinata",
+            skill: ["Fast_runner", "Jump_height"],
+            info(){
+                this.skill.forEach(function(tag){
+                    console.log(this.name, tag)
+                },this)
+            }
+        }
+        random.info()
+    </script>
+
+</body>
+</html>

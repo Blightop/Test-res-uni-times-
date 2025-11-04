@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript async-await</title>
+    <h1>Javascript async-await</h1>
+</head>
+<body>
+    <!-- witout async (no need to use Promise) -->
+    <script>
+        let result = function(score){
+            return new Promise(function(resolve,reject){
+                console.log("calculation results...")
+                if(score>50)
+                    resolve("LETS GOOOOOO")
+                else
+                    reject("Bruh")
+            })
+        }
+
+        let grade = function(response){
+            return new Promise(function(resolve,reject){
+                console.log("calculate grade...")
+                resolve("your grade is A. " + response)
+            })
+        }
+        // result(80).then(response =>{
+        //     console.log("result received")
+        //     return grade(response)
+        // }).then(finalgrade => {
+        //     console.log(finalgrade)
+        // }).catch(err => {
+        //     console.log(err)
+        // })
+
+        async function calculateResults(){
+            try {
+            const response = await result(20)
+            console.log("Results received")
+            const finalgrade = await grade(response)
+            console.log(finalgrade)
+        }
+        catch(err){
+            console.log(err)
+        }
+        }
+        calculateResults()
+    </script>
+</body>
+</html>

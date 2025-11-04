@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript promise</title>
+</head>
+<body>
+    <script>
+        // let character = new Promise(function(smash, pass){
+        //     not_loli = false;
+        //     if(not_loli)
+        //         smash()
+        //     else
+        //         pass()
+        // });
+
+        // character.then(function(){
+        //     document.write("The character is not loli. YEAH")
+        // }).catch(function(){
+        //     document.write("The character is loli. SHIT")
+        // })
+
+        // nested promise
+
+        let Kitagawa = function(){
+            return new Promise(function(BIGGYAT,WHITE_BRA){
+                BIGGYAT("Yes")
+            })
+        }
+        let Komi = function(msg){
+            return new Promise(function(BIGGYAT,WHITE_BRA){
+                BIGGYAT(msg + "NO")
+            })
+        }
+        let Hori = function(msg){
+            return new Promise(function(BIGGYAT,WHITE_BRA){
+                BIGGYAT(msg + "errrr K?")
+            })
+        }
+
+        Kitagawa().then(function(result){
+            return Komi(result)
+        }).then(function(result){
+            return Hori(result)
+        }).then(function(result){
+            console.log("ALL SMASH" + result)
+        })
+
+    </script>
+
+</body>
+</html>
